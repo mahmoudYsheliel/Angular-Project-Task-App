@@ -1,0 +1,182 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "alice.dev@example.com",
+      "password": "1234",
+      "name": "Alice Morgan",
+      "phone": "0109876543",
+      "title": "Frontend Developer",
+      "projects": [
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": "2",
+      "email": "omar.qa@example.com",
+      "password": "1234",
+      "name": "Omar Khaled",
+      "phone": "01017897738",
+      "title": "QA Engineer",
+      "projects": [
+        "2",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "id": "3",
+      "email": "sara.pm@example.com",
+      "password": "1234",
+      "name": "Sara Ahmed",
+      "phone": "01045678901",
+      "title": "Project Manager",
+      "projects": [
+        "1",
+        "2",
+        "5"
+      ]
+    },
+    {
+      "id": "4",
+      "email": "youssef.backend@example.com",
+      "password": "1234",
+      "name": "Youssef Fathy",
+      "phone": "01022334455",
+      "title": "Backend Developer",
+      "projects": [
+        "3",
+        "4"
+      ]
+    },
+    {
+      "id": "5",
+      "email": "mariam.uiux@example.com",
+      "password": "1234",
+      "name": "Mariam Hassan",
+      "phone": "01099887766",
+      "title": "UI/UX Designer",
+      "projects": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Smart Inventory System",
+      "description": "A web platform for real-time tracking and management of warehouse inventory. This is an inovative platform to increase the popularity of web courses among children"
+    },
+    {
+      "id": "2",
+      "title": "E-Learning Portal",
+      "description": "A responsive educational platform for students and instructors with course management features."
+    },
+    {
+      "id": "3",
+      "title": "Healthcare Booking App",
+      "description": "A cross-platform mobile app for scheduling medical appointments and consultations."
+    },
+    {
+      "id": "4",
+      "title": "Team Collaboration Tool",
+      "description": "An internal communication and task management tool for agile teams."
+    },
+    {
+      "id": "5",
+      "title": "Restaurant Ordering System",
+      "description": "A digital ordering and delivery management solution for restaurants."
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Setup Angular Project Structure",
+      "description": "Initialize modules, routing, and core services for Smart Inventory.",
+      "assignee_user": "1",
+      "project": "1"
+    },
+    {
+      "id": "2",
+      "title": "Design Warehouse Dashboard",
+      "description": "Create dashboard wireframes and visual design for inventory overview.",
+      "assignee_user": "5",
+      "project": "1"
+    },
+    {
+      "id": "3",
+      "title": "Implement Authentication API",
+      "description": "Develop login, signup, and JWT-based authentication for backend.",
+      "assignee_user": "4",
+      "project": "4"
+    },
+    {
+      "id": "4",
+      "title": "Write Unit Tests for Inventory Service",
+      "description": "Add Jasmine unit tests for Angular inventory service and mock HTTP calls.",
+      "assignee_user": "2",
+      "project": "1"
+    },
+    {
+      "id": "5",
+      "title": "Setup Course Module",
+      "description": "Implement CRUD for courses and integrate with backend APIs.",
+      "assignee_user": "1",
+      "project": "2"
+    },
+    {
+      "id": "6",
+      "title": "Plan Sprint Backlog",
+      "description": "Prepare sprint tasks and assign responsibilities to team members.",
+      "assignee_user": "3",
+      "project": "5"
+    },
+    {
+      "id": "7",
+      "title": "Optimize Backend Queries",
+      "description": "Improve performance of API endpoints for large datasets.",
+      "assignee_user": "4",
+      "project": "3"
+    },
+    {
+      "id": "8",
+      "title": "UI Testing for Login Flow",
+      "description": "Perform end-to-end UI testing on multiple browsers.",
+      "assignee_user": "2",
+      "project": "4"
+    },
+    {
+      "id": "9",
+      "title": "Create Mobile Responsive Layout",
+      "description": "Ensure all pages are optimized for different screen sizes.",
+      "assignee_user": "5",
+      "project": "2"
+    },
+    {
+      "id": "10",
+      "title": "Integrate Notifications Module",
+      "description": "Add real-time notifications for new orders and status updates.",
+      "assignee_user": "1",
+      "project": "5"
+    },
+    {
+      "id": "11",
+      "title": "API Documentation",
+      "description": "Document RESTful API endpoints using Swagger.",
+      "assignee_user": "4",
+      "project": "5"
+    },
+    {
+      "id": "12",
+      "title": "Accessibility Audit",
+      "description": "Check WCAG compliance and improve accessibility on key screens.",
+      "assignee_user": "5",
+      "project": "3"
+    }
+  ]
+}

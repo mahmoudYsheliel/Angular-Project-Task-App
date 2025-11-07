@@ -1,0 +1,19 @@
+<div id="projects-container">
+    <div id="projects-sidebar">
+        <app-sidebar [selectedPage]="'projects'" />
+    </div>
+    <div id="projects-main">
+        <div id="projects-header">
+            <h1>Projects</h1>
+        </div>
+
+        <div id="projects-cards-container">
+            @if (projects()) {
+            @for (item of projects(); track $index) {
+            <app-project-card [projectId]="item.id" />
+            }
+            }
+
+        </div>
+    </div>
+</div>

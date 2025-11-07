@@ -1,0 +1,10 @@
+<div class="project-card-container" (click)="routeProjectDetails()">
+    <h3 class="project-card-title">{{project().title}}</h3>
+    <p class="project-card-desc">{{project().description}}</p>
+    @if (projectUsers()) {
+    @for (item of projectUsers(); track $index) {
+    <p [ngClass]="{'selected':(item.name == projectOwner() )}" class="project-card-user-name">{{item.name}}</p>
+    }
+    }
+    
+</div>

@@ -1,0 +1,14 @@
+<div id="login-container">
+    <div id="form-container">
+        <h1 id="login-title">Login</h1>
+        <div id="input-fields">
+            <input [(ngModel)]="email" placeholder="Email" pInputText />
+            <input [(ngModel)]="pass" placeholder="Password" pInputText /> 
+        </div>
+        
+         <p-button  rounded variant="text" raised id="login-btn" label="Log in"  [pt]="btnPt" (onClick)="login()" />
+    </div>
+   
+    
+
+</div>

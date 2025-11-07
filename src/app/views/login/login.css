@@ -1,0 +1,60 @@
+#login-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('@assets/login-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-container {
+    width: clamp(20rem, 80%, 30rem);
+    height: 30rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#login-title {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+input {
+    background-color: transparent;
+    color: white;
+    height: 4rem;
+    border-radius: 4rem;
+    font-size: 1.5rem;
+    border: 2px solid white;
+    padding-inline: 2rem;
+}
+input::placeholder{
+    color: white;
+}
+input:focus::placeholder{
+    color: transparent;
+}
+
+#login-btn>*{
+    width: 100%;
+    background-color: antiquewhite;
+    font-weight:900;
+}

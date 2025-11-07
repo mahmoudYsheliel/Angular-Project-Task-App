@@ -1,0 +1,20 @@
+<div id="sidebar-container">
+
+    <div id="sidebar-pages">
+        <div class="sidebar-element" [ngClass]="{'selected':selectedPage() == 'dashboard'}" (click)="routeDashboard()">
+            <i class="pi pi-user"></i>
+            <p>Dashboard</p>
+        </div>
+        <div class="sidebar-element" [ngClass]="{'selected':selectedPage() == 'projects'}" (click)="routeProjects()">
+            <i class="pi pi-sitemap"></i>
+            <p>Projects</p>
+        </div>
+    </div>
+    <div id="sidebar-actions">
+        <div class="sidebar-element"(click)="logout()" >
+            <i class="pi pi-sign-out"></i>
+            <p>Sign out</p>
+        </div>
+    </div>
+
+</div>

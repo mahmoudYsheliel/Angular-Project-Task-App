@@ -1,59 +1,126 @@
-# TrainingApp
+# 🧩 Angular Training App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+A **project and task management training app** built with **Angular 20** and **PrimeNG**, showcasing key Angular concepts like authentication, guards, interceptors, and modular services — powered by a mock backend using **JSON Server**.
 
-## Development server
+---
 
-To start a local development server, run:
+##  Features
 
+-  User login and logout functionality
+-  Auth guards for route protection
+-  Global HTTP interceptors (logging, errors, timing)
+-  Organized modular architecture
+-  Styled UI using PrimeNG
+-  Mock backend via JSON Server (`users`, `projects`, `tasks`)
+-  Persistent authentication using local storage and Angular signals
+
+---
+
+##  Project Structure
+
+```
+src/
+├── app/
+│   ├── core/
+│   │   ├── guards/              # Auth guard
+│   │   ├── interceptors/        # Log, Error, Timing interceptors
+│   │   └── services/            # Auth, User API, Project API
+│   ├── components/              # Sidebar, Project Card, etc.
+│   ├── pages/                   # Login, Dashboard, Projects, Project Details
+│   └── app.config.ts
+└── backend/
+    └── db.json                  # JSON Server mock database
+```
+
+---
+
+##  Setup & Run
+
+###  Install dependencies
+```bash
+npm install
+```
+
+###  Start Angular development server
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+###  Run mock backend
 ```bash
-ng generate component component-name
+npx json-server backend/db.json
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+Default backend URL:
+```
+http://localhost:3000/
 ```
 
-## Building
+---
 
-To build the project run:
+##  App Overview
 
-```bash
-ng build
-```
+###  Authentication
+- Handles login and logout using mock API data.
+- Persists user session in local storage.
+- Uses **Angular signals** to manage authentication state reactively.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+###  Auth Guard
+- Restricts access to protected routes.
+- Redirects unauthenticated users to the login page.
+- Prevents logged-in users from accessing the login route again.
 
-## Running unit tests
+###  HTTP Interceptors
+| Interceptor | Purpose |
+|--------------|----------|
+| **LogInterceptor** | Logs all HTTP requests and responses for debugging. |
+| **ErrorInterceptor** | Handles HTTP and network errors globally. |
+| **TimingInterceptor** | Measures and logs request latency using `performance.now()`. |
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+###  Services
+| Service | Purpose |
+|----------|----------|
+| **AuthService** | Manages authentication state, login/logout, and local storage. |
+| **UserApiService** | Provides user-related API operations. |
+| **ProjectApiService** | Handles fetching and managing project data. |
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+##  Components
 
-For end-to-end (e2e) testing, run:
+| Component | Description |
+|------------|-------------|
+| **Sidebar** | Displays navigation links and active user info. |
+| **Project Card** | Displays project summary using a passed `projectId` input. |
+| **Dashboard** | Lists projects assigned to the logged-in user. |
+| **Project Details** | Shows project-specific info and related tasks. |
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+##  Mock Backend
 
-## Additional Resources
+The backend uses **JSON Server** with the following collections:
+- `/users`
+- `/projects`
+- `/tasks`
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+IDs are stored as strings, with relational references between users and projects.
+
+---
+
+##  Tech Stack
+
+- **Angular 20**
+- **PrimeNG**
+- **TypeScript**
+- **RxJS / Signals**
+- **JSON Server**
+
+---
+
+##  Author
+
+**Developed by Mahmoud Yasser**  
+ A hands-on training project for mastering modern Angular patterns.
+
+---

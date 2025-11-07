@@ -1,0 +1,108 @@
+#dashboard-container {
+    display: grid;
+    grid-template-columns: max-content auto;
+
+}
+
+#dashboard-main {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+#dashboard-header {
+    color: #454545;
+    margin: 0rem auto 1rem;
+    padding: 1rem;
+    background-color: #fcfcfc;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dashboard-image-title-email-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1rem;
+}
+
+#dashboard-user-image {
+    font-size: 2rem;
+    padding: 1rem;
+    color: #454545;
+    border: 2px solid #888888;
+    border-radius: 100%;
+}
+
+#dashboard-title-email {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#dashboard-title-email>:first-of-type {
+    font-size: 1.25rem;
+    color: #2c2c2c;
+    font-weight: bolder;
+}
+
+#dashboard-title-email>:last-of-type {
+    color: #454545;
+    font-weight: lighter;
+}
+
+#dashboard-fields-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 0rem;
+}
+
+.dashboard-field-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dashboard-field-info-container>p {
+    font-size: 1.125rem;
+    font-weight: 700;
+    width: 5rem;
+    color: #454545;
+}
+
+i {
+    cursor: pointer;
+    color: #01abff;
+}
+
+#save-button-container {
+    display: flex;
+    justify-content: end;
+    padding-right: 4rem;
+    padding-top: 2rem;
+}
+
+#dashboard-user-projects {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media (max-width:1024px) {
+    #dashboard-fields-info-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

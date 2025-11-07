@@ -1,0 +1,30 @@
+#projects-container {
+    display: grid;
+    grid-template-columns: max-content auto;
+
+}
+
+#projects-main {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1rem;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+#projects-header {
+    color: #454545;
+    margin: 0rem auto 1rem;
+    padding: 1rem;
+    background-color: #fcfcfc;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#projects-cards-container{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}

@@ -1,0 +1,46 @@
+<div id="dashboard-container">
+    <div id="dashboard-sidebar">
+        <app-sidebar [selectedPage]="'dashboard'" />
+    </div>
+    <div id="dashboard-main">
+        <div id="dashboard-header">
+            <h1>Dashboard</h1>
+        </div>
+        <div id="dashboard-user-info">
+            <div id="dashboard-image-title-email-container">
+                <i id="dashboard-user-image" class="pi pi-user"></i>
+                <div id="dashboard-title-email">
+                    <p> {{userInfo().title}} </p>
+                    <p> {{userInfo().email}} </p>
+                </div>
+            </div>
+            <div id="dashboard-fields-info-container">
+                <div class="dashboard-field-info-container">
+                    <p>Name</p>
+                    <div class="input-icon">
+                        <input type="text" pInputText [disabled]="!editName()" [(ngModel)]="userInfo().name" />
+                        <i class="pi pi-pencil" (click)="swapEditName()"></i>
+                    </div>
+
+                </div>
+                <div class="dashboard-field-info-container">
+                    <p>Phone</p>
+                    <div class="input-icon">
+                        <input type="text" pInputText [disabled]="!editPhone()" [(ngModel)]="userInfo().phone" />
+                        <i class="pi pi-pencil" (click)="swapEditPhone()"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div id="save-button-container">
+                <p-button label="Save" (onClick)="saveChanges()" />
+
+            </div>
+        </div>
+        <div id="dashboard-user-projects">
+            @for (item of userInfo().projects; track $index) {
+            <app-project-card [projectOwner]=" userInfo().name" [projectId]="item" />
+            }
+        </div>
+    </div>
+</div>

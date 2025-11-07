@@ -1,0 +1,31 @@
+#sidebar-container {
+    height: 100vh;
+    background-color: #fcfcfc;
+    width: fit-content;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sidebar-pages,
+#sidebar-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sidebar-element {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #444444;
+}
+
+.selected{
+    background-color: #f0f0f0;
+    color: #2c2c2c;
+}
