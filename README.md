@@ -26,7 +26,7 @@ src/
 │   │   ├── interceptors/        # Log, Error, Timing interceptors
 │   │   └── services/            # Auth, User API, Project API
 │   ├── components/              # Sidebar, Project Card, etc.
-│   ├── pages/                   # Login, Dashboard, Projects, Project Details
+│   ├── views/                   # Login, Dashboard, Projects, Project Details
 │   └── app.config.ts
 └── backend/
     └── db.json                  # JSON Server mock database
